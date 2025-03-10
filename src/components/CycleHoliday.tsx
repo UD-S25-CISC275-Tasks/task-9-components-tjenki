@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Button } from "react-bootstrap";
 
 export function CycleHoliday(): React.JSX.Element {
+<<<<<<< HEAD
     type Holiday =
         | "Holiday: 🩷"
         | "Holiday: 👩🏿‍✈️"
@@ -39,4 +40,7 @@ export function CycleHoliday(): React.JSX.Element {
             <Button onClick={advanceByYear}>Advance By Year</Button>
         </div>
     );
+=======
+    return <div>Cycle Holiday</div>;
+>>>>>>> origin/task-components
 }

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Button } from "react-bootstrap";
 
 export function StartAttempt(): React.JSX.Element {
+<<<<<<< HEAD
     let [attemptNum, setAttemptNum] = useState<number>(4);
     let [progress, setProgress] = useState<boolean>(false);
     function start(): void {
@@ -39,4 +40,7 @@ export function StartAttempt(): React.JSX.Element {
             </span>
         </div>
     );
+=======
+    return <div>Start Attempt</div>;
+>>>>>>> origin/task-components
 }

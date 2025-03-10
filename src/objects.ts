@@ -10,6 +10,7 @@ export function makeBlankQuestion(
     name: string,
     type: QuestionType
 ): Question {
+<<<<<<< HEAD
     return {
         id: id,
         name: name,
@@ -20,6 +21,9 @@ export function makeBlankQuestion(
         points: 1,
         published: false
     };
+=======
+    return {};
+>>>>>>> origin/task-components
 }
 
 /**
@@ -30,9 +34,12 @@ export function makeBlankQuestion(
  * HINT: Look up the `trim` and `toLowerCase` functions.
  */
 export function isCorrect(question: Question, answer: string): boolean {
+<<<<<<< HEAD
     if (answer.trim().toLowerCase() === question.expected.toLowerCase()) {
         return true;
     }
+=======
+>>>>>>> origin/task-components
     return false;
 }
 
@@ -43,6 +50,7 @@ export function isCorrect(question: Question, answer: string): boolean {
  * be exactly one of the options.
  */
 export function isValid(question: Question, answer: string): boolean {
+<<<<<<< HEAD
     if (question.type === "short_answer_question") {
         return true;
     } else {
@@ -53,6 +61,9 @@ export function isValid(question: Question, answer: string): boolean {
         }
         return false;
     }
+=======
+    return false;
+>>>>>>> origin/task-components
 }
 
 /**
@@ -62,7 +73,11 @@ export function isValid(question: Question, answer: string): boolean {
  * name "My First Question" would become "9: My First Q".
  */
 export function toShortForm(question: Question): string {
+<<<<<<< HEAD
     return `${question.id}` + ": " + question.name.substring(0, 10);
+=======
+    return "";
+>>>>>>> origin/task-components
 }
 
 /**
@@ -83,6 +98,7 @@ export function toShortForm(question: Question): string {
  * Check the unit tests for more examples of what this looks like!
  */
 export function toMarkdown(question: Question): string {
+<<<<<<< HEAD
     let line1: string = "# " + question.name + "\n" + question.body;
     if (question.type === "multiple_choice_question") {
         question.options.forEach((choices) => {
@@ -90,6 +106,9 @@ export function toMarkdown(question: Question): string {
         });
     }
     return line1;
+=======
+    return "";
+>>>>>>> origin/task-components
 }
 
 /**
@@ -97,8 +116,12 @@ export function toMarkdown(question: Question): string {
  * `newName`.
  */
 export function renameQuestion(question: Question, newName: string): Question {
+<<<<<<< HEAD
     let newQuestion: Question = { ...question, name: newName };
     return newQuestion;
+=======
+    return question;
+>>>>>>> origin/task-components
 }
 
 /**
@@ -107,11 +130,15 @@ export function renameQuestion(question: Question, newName: string): Question {
  * published; if it was published, now it should be not published.
  */
 export function publishQuestion(question: Question): Question {
+<<<<<<< HEAD
     let newQuestion: Question = {
         ...question,
         published: !question.published ? true : false
     };
     return newQuestion;
+=======
+    return question;
+>>>>>>> origin/task-components
 }
 
 /**
@@ -121,6 +148,7 @@ export function publishQuestion(question: Question): Question {
  * The `published` field should be reset to false.
  */
 export function duplicateQuestion(id: number, oldQuestion: Question): Question {
+<<<<<<< HEAD
     let newQuestion: Question = {
         ...oldQuestion,
         name: "Copy of " + oldQuestion.name,
@@ -128,6 +156,9 @@ export function duplicateQuestion(id: number, oldQuestion: Question): Question {
         id: id
     };
     return newQuestion;
+=======
+    return oldQuestion;
+>>>>>>> origin/task-components
 }
 
 /**
@@ -138,11 +169,15 @@ export function duplicateQuestion(id: number, oldQuestion: Question): Question {
  * Check out the subsection about "Nested Fields" for more information.
  */
 export function addOption(question: Question, newOption: string): Question {
+<<<<<<< HEAD
     let newQuestion: Question = {
         ...question,
         options: [...question.options, newOption]
     };
     return newQuestion;
+=======
+    return question;
+>>>>>>> origin/task-components
 }
 
 /**
@@ -159,6 +194,7 @@ export function mergeQuestion(
     contentQuestion: Question,
     { points }: { points: number }
 ): Question {
+<<<<<<< HEAD
     return {
         ...contentQuestion,
         id: id,
@@ -166,4 +202,7 @@ export function mergeQuestion(
         points: points,
         published: false
     };
+=======
+    return contentQuestion;
+>>>>>>> origin/task-components
 }
