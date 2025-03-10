@@ -1,9 +1,9 @@
+
 import React, { useState } from "react";
 import { Button } from "react-bootstrap";
 import { QuestionType } from "../interfaces/question";
 
 export function ChangeType(): React.JSX.Element {
-<<<<<<< HEAD
     let [type, setType] = useState<QuestionType>("short_answer_question");
     function Change(): void {
         setType(
@@ -25,7 +25,4 @@ export function ChangeType(): React.JSX.Element {
             )}
         </div>
     );
-=======
-    return <div>Change Type</div>;
->>>>>>> origin/task-components
 }

@@ -1,10 +1,5 @@
 // You will not need to modify this file
 
-<<<<<<< HEAD
-// You will not need to modify this file
-
-=======
->>>>>>> origin/task-components
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
